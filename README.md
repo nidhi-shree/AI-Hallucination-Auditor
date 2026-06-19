@@ -188,10 +188,3 @@ FactVibe is an AI-assisted tool and may not be 100% accurate. The verdicts are b
 
 ---
 
-## 📜 License
-
-MIT License — free for personal and educational use.
-
----
-
-*Built with ❤️ using Groq (Qwen3-32B) + Streamlit*
