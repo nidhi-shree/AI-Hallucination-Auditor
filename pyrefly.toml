@@ -1,0 +1,29 @@
+# pyrefly.toml — Pyrefly static type-checker configuration
+# Docs: https://pyrefly.org/en/docs/configuration/
+#
+# Purpose: suppress false-positive errors that occur when Pyrefly extracts
+# content from inside Python triple-quoted strings (docstrings, st.markdown()
+# HTML/CSS blocks in app.py) and tries to type-check it as Python code.
+#
+# Error severity values: "error" | "warn" | "ignore"
+
+# Only analyse the main application file
+project-includes = ["app.py"]
+
+# Exclude the virtual environment from type checking
+project-excludes = ["venv/**"]
+
+[errors]
+# Pyrefly reports parse errors when it tokenises CSS / HTML / prose inside
+# string literals as if they were Python expressions.
+parse-error = "ignore"
+
+# Plain English words in docstrings get flagged as unresolved Python names.
+unresolved-name = "ignore"
+
+# Third-party packages (groq, ddgs, reportlab, streamlit) that Pyrefly
+# cannot locate in its search paths.
+missing-import = "ignore"
+
+# f-string HTML construction can trigger argument-type mismatches.
+bad-argument-type = "ignore"

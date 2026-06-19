@@ -1,0 +1,165 @@
+/* FactVibe – Enterprise SaaS stylesheet
+   Loaded at runtime by inject_custom_css() in app.py
+   ------------------------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+html,
+body,
+[class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ── Background ─────────────────────────────────────────────────── */
+.stApp {
+    background: #0d1117;
+    min-height: 100vh;
+}
+
+/* ── Hide Streamlit chrome ───────────────────────────────────────── */
+#MainMenu,
+footer,
+header {
+    visibility: hidden;
+}
+
+/* ── Main container ──────────────────────────────────────────────── */
+.block-container {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+    max-width: 980px;
+}
+
+/* ── Metric cards ────────────────────────────────────────────────── */
+[data-testid="metric-container"] {
+    background: #161b22 !important;
+    border: 1px solid #21262d !important;
+    border-radius: 8px !important;
+    padding: 1rem 1.2rem !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #f0f6fc !important;
+    font-weight: 700 !important;
+    font-size: 1.55rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #8b949e !important;
+    font-weight: 500 !important;
+    font-size: 0.78rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ── Expander ────────────────────────────────────────────────────── */
+[data-testid="stExpander"] {
+    background: #161b22 !important;
+    border: 1px solid #21262d !important;
+    border-radius: 8px !important;
+    margin-bottom: 0.6rem;
+}
+
+[data-testid="stExpander"] summary {
+    color: #c9d1d9 !important;
+    font-weight: 500;
+    font-size: 0.92rem;
+}
+
+/* ── Text area ───────────────────────────────────────────────────── */
+.stTextArea textarea {
+    background: #161b22 !important;
+    color: #c9d1d9 !important;
+    border: 1px solid #30363d !important;
+    border-radius: 8px !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.93rem;
+    line-height: 1.6;
+}
+
+.stTextArea textarea:focus {
+    border-color: #58a6ff !important;
+    box-shadow: 0 0 0 2px #1f6feb44;
+}
+
+/* ── Primary button ──────────────────────────────────────────────── */
+.stButton>button {
+    background: #1f6feb !important;
+    color: #ffffff !important;
+    border: 1px solid #388bfd !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 0.88rem !important;
+    padding: 0.55rem 1.5rem !important;
+    letter-spacing: 0.02em;
+    transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stButton>button:hover {
+    background: #388bfd !important;
+    box-shadow: 0 0 0 3px #1f6feb33;
+}
+
+/* ── Download button ─────────────────────────────────────────────── */
+.stDownloadButton>button {
+    background: #238636 !important;
+    color: #ffffff !important;
+    border: 1px solid #2ea043 !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 0.88rem !important;
+    padding: 0.55rem 1.5rem !important;
+    letter-spacing: 0.02em;
+    transition: background 0.15s ease;
+}
+
+.stDownloadButton>button:hover {
+    background: #2ea043 !important;
+}
+
+/* ── Alerts ──────────────────────────────────────────────────────── */
+.stAlert {
+    border-radius: 6px !important;
+    font-size: 0.88rem !important;
+}
+
+/* ── Divider ─────────────────────────────────────────────────────── */
+hr {
+    border-color: #21262d !important;
+    margin: 1.2rem 0 !important;
+}
+
+/* ── Spinner ─────────────────────────────────────────────────────── */
+.stSpinner>div {
+    border-top-color: #58a6ff !important;
+}
+
+/* ── Progress bar ────────────────────────────────────────────────── */
+.stProgress>div>div {
+    background-color: #1f6feb !important;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 3px;
+}
+
+/* ── Section labels ──────────────────────────────────────────────── */
+.fv-section-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #6e7681;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.4rem;
+}
